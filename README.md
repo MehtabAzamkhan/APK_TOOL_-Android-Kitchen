@@ -45,32 +45,5 @@ apktool b systemui -o systemui.apk
 - Flash the modified boot.img to your OnePlus 3T using a custom recovery like TWRP.
 - Ensure the new APKs are properly installed and replace the old ones.
 
-
-
-
-
-
-
-
-    
-## Prerequisites
-- ADB Installation: Follow the official ADB documentation to install ADB on your system.
-- Root Access: Ensure your Android device is rooted to perform system modifications.
-
-## Usage
-Replace Boot Animation:
-
-- Pull the current boot animation: adb pull /system/media/bootanimation.zip <local_path>
-- Modify the boot animation as needed.
-- Push the modified animation: adb push <local_path>/bootanimation.zip /system/media/bootanimation.zip
-- Set appropriate permissions: adb shell su -c 'chmod 644 /system/media/bootanimation.zip'
-- Reboot your device to see the changes.
-
-Manage Applications:
-
-- List installed packages: adb shell pm list packages
-- Uninstall a package: adb shell pm uninstall --user 0 <package_name>
-- Reinstall a package: adb install <path_to_apk>
-
 # Contact
 For any questions or issues, feel free to open an issue in the repository or contact me directly.
